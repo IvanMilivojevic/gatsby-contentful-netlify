@@ -1,0 +1,30 @@
+.header {
+  background-color: #6b5226;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.topNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topNav ul li {
+  margin: 0 15px;
+}
+
+.topNav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.userHeader {
+  position: absolute;
+  right: 20px;
+  color: #fff;
+}

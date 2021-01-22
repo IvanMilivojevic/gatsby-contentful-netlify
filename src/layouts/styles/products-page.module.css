@@ -1,0 +1,39 @@
+.productsWrapper {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.productsHeading {
+  padding: 0 15px;
+}
+
+.productsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productSingle {
+  width: 33.33%;
+  padding: 10px 15px;
+}
+
+.productInfo {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.productInfo h2 {
+  margin-top: 0;
+}
+
+.productPrice {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .productSingle {
+    width: 100%;
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,34 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px 15px;
+}
+
+img {
+  max-width: 100%;
+}
