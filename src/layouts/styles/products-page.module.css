@@ -30,6 +30,7 @@
 .productPrice {
   margin-bottom: 10px;
   font-weight: bold;
+  color: orange;
 }
 
 @media screen and (max-width: 767px) {
