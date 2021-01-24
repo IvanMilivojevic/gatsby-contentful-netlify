@@ -7,7 +7,6 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <div>Total number of images found: {data.allFile.totalCount}</div>
-      <div>Total number of images found locally: {data.allFile.totalCount}</div>
       <PrimaryButton>Call to Action</PrimaryButton>
     </Layout>
   )
