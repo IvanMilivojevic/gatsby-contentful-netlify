@@ -6,7 +6,7 @@ import { PrimaryButton } from "../components/styled/buttons"
 const Home = ({ data }) => {
   return (
     <Layout>
-      <div>Total number of images found locally: {data.allFile.totalCount}</div>
+      <div>Total number of images: {data.allFile.totalCount}</div>
       <PrimaryButton>Call to Action</PrimaryButton>
     </Layout>
   )
