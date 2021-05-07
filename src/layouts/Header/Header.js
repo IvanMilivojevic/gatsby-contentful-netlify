@@ -10,7 +10,6 @@ const Header = () => {
           title
           description
           author
-          data
           person {
             name
             surname

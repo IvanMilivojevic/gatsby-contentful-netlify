@@ -13,8 +13,8 @@ module.exports = {
     title: "GatsbyJS tutorial",
     description: "Intro to GatsbyJS",
     author: "@IvanMilivojevic",
-    data: ["item1", "item2", "item3"],
     person: { name: "Ivan", surname: "Milivojevic", age: 32 },
+    siteUrl: `https://gatsby-ivcha.netlify.app/`,
   },
   plugins: [
     {
@@ -41,5 +41,44 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        // 1 query for each data type
+        query: `
+          {
+            allContentfulBlogPost {
+              edges {
+                node {
+                  id
+                  slug
+                  updated_at: updatedAt
+                }
+              }
+            },
+            allContentfulProduct {
+              edges {
+                node {
+                  id
+                  slug
+                  updated_at: updatedAt
+                }
+              }
+            }
+          }
+        `,
+        mapping: {
+          allContentfulBlogPost: {
+            sitemap: `separate`,
+          },
+          allContentfulProduct: {
+            sitemap: `separate`,
+          },
+        },
+        exclude: [`/dev-404-page`, `/404`, `/404.html`, `/offline-plugin-app-shell-fallback`],
+        createLinkInHead: true,
+        addUncaughtPages: true,
+      },
+    },
   ],
 }
